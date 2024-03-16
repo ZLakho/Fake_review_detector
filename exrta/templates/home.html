@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <h1>ADMIN PORTAL</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a>
+           
+        </nav>
+    </header>
+
+    <div class="container">
+        <ol class="products">
+            {% for product_id, product in products.items() %}
+                <li class="product">
+                    <img src="{{ url_for('static', filename='product_images/' + product['image']) }}" alt="{{ product['name'] }}" class="product-image">
+                    <h2>{{ product['name'] }}</h2>
+                    <a href="{{ url_for('product', product_id=product_id) }}">View Details</a>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+</body>
+</html>

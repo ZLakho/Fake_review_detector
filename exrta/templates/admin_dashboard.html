@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Admin Dashboard</h1>
+
+    <h2>Product Reviews</h2>
+    <ul>
+        {% for product_id, product_name in products.items() %}
+            <li>
+                Product: {{ product_name }},
+                <form method="POST" action="{{ url_for('delete_review', product_id=product_id) }}">
+                    <button type="submit">Delete Reviews</button>
+                </form>
+                
+                <form method="POST" action="{{ url_for('product', product_id=product_id) }}">
+                    <button type="submit">Submit Review</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+

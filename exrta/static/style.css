@@ -1,0 +1,96 @@
+/* static/style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #777;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product h2 {
+    color: #333;
+}
+
+.product form {
+    margin-top: 20px;
+}
+
+.product label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+.reviews {
+    list-style: none;
+    padding: 0;
+}
+
+.review {
+    background-color: #eee;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+    margin: 0;
+}
